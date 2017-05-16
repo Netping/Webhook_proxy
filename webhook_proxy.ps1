@@ -2,7 +2,7 @@ Add-Type -AssemblyName System.Web
 
 #Debug options
 #----------------------------
-#$DebugPreference = "Continue" # turn debug on 
+$DebugPreference = "Continue" # turn debug on 
 #$DebugPreference = "SilentlyContinue" # turn debug off
 Set-Variable -Name DEBUG_INFO -Value 0 -Option Constant -ErrorAction SilentlyContinue
 Set-Variable -Name DEBUG_ERROR -Value 1 -Option Constant -ErrorAction SilentlyContinue
@@ -13,7 +13,7 @@ Set-Variable -Name DEBUG_FILE_PATH -Value "C:\Program Files (x86)\Syslogd\Script
 
 #Constants
 # ---------------------------
-Set-Variable -Name LOG_FILE_PATH -Value "C:\Program Files (x86)\Syslogd\Scripts\webhook_proxy_log.txt" -Option Constant -ErrorAction SilentlyContinue # !!! if change need restart powershell session !!!
+Set-Variable -Name LOG_FILE_PATH -Value "C:\Share\webhook_proxy_log.txt" -Option Constant -ErrorAction SilentlyContinue # !!! if change need restart powershell session !!!
 
 
 
