@@ -66,12 +66,13 @@ $msg=$args[4]
 
 for ($i=5; $i -lt $args.Count; $i++)
 {
- $msg=$msg+ " " + $args[$i].ToString()
+ $msg=$msg+ "" + $args[$i]
 }
 $msg=[System.Web.HttpUtility]::UrlDecode($msg,[System.Text.Encoding]::GetEncoding(1251))
 $msg=$msg.Replace("`n","")
 $Msg_Info.Add("RawMessage",$msg)
 
+DebugOutput ("Raw message: " +$msg)
 DebugOutput ("`n" +$Msg_Info.Values)
  
 
