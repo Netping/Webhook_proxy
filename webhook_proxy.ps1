@@ -122,8 +122,8 @@ if ($Msg_Info.ContainsKey("1.3.6.1.4.1.25728.9900.3.3.0")) {
 }
 
 # From NetPing SMS
-if ($Msg_Info.ContainsKey("1.3.6.1.4.1.25728.3800.1.10.0")) {
-    DebugOutput "1.3.6.1.4.1.25728.3800.1.10.0 was found"
+if ($Msg_Info.ContainsKey("1.3.6.1.4.1.25728.3800.1.12.0")) {
+    DebugOutput "1.3.6.1.4.1.25728.3800.1.12.0 was found"
 
     #Extract HTTP destination address
     $Msg_Info.Add("URL",[System.Uri]([regex]::Match($Msg_Info.'1.3.6.1.4.1.25728.95.31.0','https?://\S+')).ToString())
@@ -134,7 +134,7 @@ if ($Msg_Info.ContainsKey("1.3.6.1.4.1.25728.3800.1.10.0")) {
     DebugOutput ("Was found sysName: " + $Msg_Info.sysName)
 
     #Extract Full Webhook Message
-    $Msg_Info.Add("FullWebhookMessage",[string]$Msg_Info.'1.3.6.1.4.1.25728.3800.1.10.0')
+    $Msg_Info.Add("FullWebhookMessage",[string]$Msg_Info.'1.3.6.1.4.1.25728.3800.1.12.0')
     DebugOutput ("Webhook message: " + $Msg_Info.FullWebhookMessage + " (from: " + $Msg_Info.InMessageParams.sysName + ")")
 }
 
